@@ -1,12 +1,12 @@
 let cardRef = document.querySelector('.segundasection__cards')
 let form = document.querySelector('.section__form')
 let btn = document.querySelector('.section__btn')
-let titulo = document.querySelector('.section__titulo')
+let rating = document.querySelector('.section__rating')
 let url = document.querySelector('.section__url')
 let genero = document.querySelector('.section__genero')
 
 
-titulo.addEventListener('keyup',(e) => validarTitulo(e.target.value))
+rating.addEventListener('keyup',(e) => validarRating(e.target.value))
 genero.addEventListener('keyup',(e) => validarDesc(e.target.value))
 url.addEventListener('keyup',(e) =>validarUrl(e.target.value))
 btn.addEventListener('click',(e) =>adicionarCurso(e))
@@ -19,11 +19,11 @@ let cursoData = {
 }
 let ValidaCampos = () => {
     
-        const tituloValido = titulo.value.length >= 4;
+        const ratingValido = rating.value.length >= 4;
         const generoValida = genero.value.length >= 4;
         const urlValida = url.value.length >=4
       
-        if (tituloValido && generoValida && urlValida) {
+        if (ratingValido && generoValida && urlValida) {
 
           btn.disabled = false;
         } else {
@@ -34,8 +34,8 @@ let ValidaCampos = () => {
     }
 
 
-let validarTitulo = (titulo) => {
-    cursoData.titulo = titulo
+let validarRating= (rating) => {
+    cursoData.rating = rating
 
     ValidaCampos()
 }
@@ -55,10 +55,18 @@ let adicionarCurso = (e) => {
     e.preventDefault()
     cardRef.innerHTML += `
     <div class="card">
+
+        <div class="card__rating">
+            <img src="${cursoData.rating}" class="card__rating">
+        </div>
+
+        <div>
+            <img src="${cursoData.url}" class="card__url">
+        </div>
+        
         <div class="card__genero">
             <p>${cursoData.genero}</p>
         </div>
-        <img src="${cursoData.url}" alt="">
     </div>
 `
 form.reset()
