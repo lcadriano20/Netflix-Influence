@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@700&display=swap');
+
+/* PRIMEIRA SECTION */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body {
+    background-image: url(https://www.notebookcheck.info/fileadmin/Notebooks/News/_nc3/netflixteaser.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section {
+    margin: auto;
+    border-radius: 3px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.436);
+    height: 23rem;
+    width: 50%;
+}
+.section__form>label {
+    color: white;
+}
+
+.section__form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 1.2rem;
+}
+.section__form>h2 {
+    color: white;
+}
+.section__form>h2:hover {
+    color: #FE0000;
+}
+.section__form>input[type="text"] {
+    border-radius: 3px;
+    height: 2rem;
+    border: none;
+}
+.section__form>input[type="text"]::placeholder {
+    padding-left: 1rem;
+}
+
+.section__textarea::placeholder {
+    padding-left: 1rem;
+}
+.section__btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    background-color: #FE0000;
+    font-weight: bolder;
+    width: 10rem;
+}
+/* SEGUNDA SECTION */ 
+
+.segundasection {
+    display: flex;
+    justify-content: center;
+
+}
+.segundasection__series {
+
+border-radius: 3px;
+margin-top: 2rem;
+width: 50%;
+height: auto;
+background-color: rgba(0, 0, 0, 0.437);
+
+}
+.segundasection__series>h2 {
+    color: white;
+    text-align: center;
+}
+.segundasection__series>h2:hover {
+    color: #FE0000;
+}
+.segundasection__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* CARDS */
+
+.card {
+    margin-top: 3rem;
+    width: 13rem;
+    height: 17rem;
+    display: flex;
+    margin-right: 3rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card>img {
+    height: 100%;
+    width: 13rem;
+}
+
+.card>p {
+    color: white;
+}
+.card>h2 {
+    color: rgb(12, 1, 1);
+}
+.card__genero {
+    background-color: black;
+    opacity: 80%;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.card__genero>p {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    color: #FE0000;
+}
