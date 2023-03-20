@@ -36,24 +36,24 @@ body {
     width: 90%;
     gap: 1.2rem;
 }
+.section__form>i {
+    color: gold;
+}
 .section__form>h2 {
     color: white;
 }
 .section__form>h2:hover {
     color: #FE0000;
 }
-.section__form>input[type="text"] {
+.section__form>input[type="text"],input[type="number"] {
     border-radius: 3px;
     height: 2rem;
     border: none;
 }
-.section__form>input[type="text"]::placeholder {
+.section__form>input::placeholder {
     padding-left: 1rem;
 }
 
-.section__textarea::placeholder {
-    padding-left: 1rem;
-}
 .section__btn {
     cursor: pointer;
     border: none;
@@ -146,4 +146,7 @@ background-color: rgba(0, 0, 0, 0.437);
     bottom: 90%;
     left: 3%;
     width: 30px;
+}
+.divTrailer {
+    visibility: hidden;
 }

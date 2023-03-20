@@ -12,18 +12,21 @@ url.addEventListener('keyup',(e) =>validarUrl(e.target.value))
 btn.addEventListener('click',(e) =>adicionarCurso(e))
 
 
+
+
+
 const cursoData = { 
-    titulo: '',
+    rating: '',
     ageRestriction: '',
     url: ''
 }
+
+
 const ValidaCampos = () => {
     
-        const ratingValido = rating.value.length >= 4;
-        const ageValida = ageRestriction.value.length >= 4;
-        const urlValida = url.value.length >=4
+        const urlValida    = url.value.length >=4
       
-        if (ratingValido && ageValida && urlValida) {
+        if (urlValida) {
 
           btn.disabled = false;
         } else {
@@ -36,7 +39,6 @@ const ValidaCampos = () => {
 
 let validarRating= (rating) => {
     cursoData.rating = rating
-
     ValidaCampos()
 }
 
@@ -48,10 +50,25 @@ const validarAge = (ageRestriction) => {
 }
 const validarUrl = (url) => {
     cursoData.url = url
+
     ValidaCampos()
 }
 
 const adicionarCurso = (e) => {
+
+    if(cursoData.rating == 5) {
+        cursoData.rating = 'https://cdn.pixabay.com/photo/2022/01/11/12/16/rating-6930474__340.png'
+    }
+
+
+    if(cursoData.ageRestriction == 16) {
+        cursoData.ageRestriction = 'https://static.vecteezy.com/system/resources/previews/018/723/340/original/age-rating-sign-over-16-on-transparent-background-free-png.png'
+    }
+    if(cursoData.ageRestriction == 14) {
+        cursoData.ageRestriction = 'https://static.vecteezy.com/system/resources/previews/018/251/258/non_2x/age-rating-sign-over-14-on-transparent-background-free-png.png'
+    }
+
+
     e.preventDefault()
 
     cardRef.innerHTML += `
